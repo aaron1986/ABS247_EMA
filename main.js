@@ -33,3 +33,32 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 });
+
+
+//form for accounments
+document.addEventListener('DOMContentLoaded', (event) => {
+    const form = document.getElementById('form_announcement');
+    const announcementInput = document.getElementById('announcement');
+    const mainDiv = document.querySelector('main'); 
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        
+        const announcementText = announcementInput.value; 
+
+     
+            const displayDiv = document.createElement('div');
+            displayDiv.classList.add('announcement-text');
+            displayDiv.textContent = `${announcementText}`;
+            mainDiv.appendChild(displayDiv);
+        }
+    );
+    
+    announcementInput.addEventListener('input', function() {
+        const announcementText = announcementInput.value;
+        const invalidChars = /[^a-zA-Z0-9\s]/g; 
+        if (invalidChars.test(announcementText)) {
+            announcementInput.value = announcementText.replace(invalidChars, '');
+        }
+    });
+});

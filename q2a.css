@@ -150,6 +150,12 @@ form > button {
   margin-top:5%;
 }
 
+.announcement-text {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 3%;
+}
+
 
 
 /* svg */
