@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="./q2a.css">
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script src='main.js' defer></script>
 </head>
 
 <body>
@@ -28,16 +28,67 @@
      <!-- image and text upload -->
      <div class="upload_section">
         <h2 id="upload-text">Create Entry for Events</h2>
-        <form id="form_img">
-        <input type="file" id="img-file" accept="image/jpg, image/png, image/jpeg, image/tiff"><br>
+        <form id="form_img" action="https://students.open.ac.uk/mct/tt284/reflect/reflect.php" method="post">
+
+        <!-- name_of_ride input -->
+        <label for="name_of_ride">Name of Ride:</label>
+        <input type="text" id="name_of_ride" name="name_of_ride"><br>
+
+        <!-- type of ride -->
+        <label for="type_of_ride">Type of Ride:</label>
+        <input type="text" id="type_of_ride" name="type_of_ride"><br>
+
+        <!-- date -->
         <label for="date">Date:</label>
         <input type="date" id="date" name="date"><br>
-        <label for="comments">Comments:</label>
-        <input type="text" id="comments" placeholder="Comments"><br>
-        <input type="hidden" id="SessionIdentifier" name="SessionIdentifier" value="ff53-dd45-dcba9876-9090"><br>
-        <button type="submit">Upload Image</button>
-    </form>
 
+        <!-- time -->
+        <label for="appt">Select a time:</label>
+        <input type="time" id="appt" name="appt"> <br>
+
+         <!-- Duration -->
+         <label for="duration">Duration:</label>
+         <input type="text" id="duration" name="duration" placeholder="Duration"><br>
+
+        <!-- Meeting point -->
+        <label for="meetingPoint">Meeting point :</label>
+        <input type="text" id="meetingPoint" name="meetingPoint" placeholder="Meeting point"><br>
+
+        <!-- Distance -->
+        <label for="distance">Distance:</label>
+        <input type="text" id="distance" name="distance" placeholder="Distance"><br>
+
+        <!-- Elevation -->
+        <label for="elevation">Elevation:</label>
+        <input type="text" id="elevation" name="elevation" placeholder="Elevation"><br>
+
+        <!-- Maximum group size -->
+        <label for="maximum_group_size">Maximum group size:</label>
+        <input type="text" id="maximum_group_size" name="maximum_group_size" placeholder="Maximum group size"><br>
+
+        <!-- Name of Leader -->
+        <label for="name_of_leader">Name of Leader:</label>
+        <input type="text" id="name_of_leader" name="name_of_leader" placeholder="Name of Leader"><br>
+
+        <!-- Contact Number -->
+        <label for="contact_number">Contact Number:</label>
+        <input type="text" id="contact_number" name="contact_number" placeholder="Contact Number"><br>
+
+        <!-- Alternative Contact Number -->
+        <label for="alternative_contact_number">Alternative Contact Number:</label>
+        <input type="text" id="alternative_contact_number" name="alternative_contact_number" placeholder="Alternative Contact Number"><br>
+
+        <!-- Comments -->
+        <label for="comments">Comments:</label>
+        <input type="text" id="comments" name="comments" placeholder="Comments"><br>
+
+        <!-- Status -->
+        <label for="status">Status:</label>
+        <input type="text" id="status" name="status" placeholder="Status"><br>
+
+        <input type="hidden" id="SessionIdentifier" name="SessionIdentifier" value="ff53-dd45-dcba9876-9090"><br>
+        <button type="submit">Upload Data</button>
+    </form>
 <div class="image-section" id="image-section">
 
 </div> <!-- end of upload_section -->

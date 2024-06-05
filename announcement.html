@@ -24,16 +24,25 @@
         </nav>
     </header>
 
-    <main>   
+    <main>  
         <!-- heading -->
         <div class="announcement">Announcements
         </div> <!-- end of heading div -->
 
-        <form id="form_announcement">
-            <label for="announcement">Announcement:</label>
-            <input type="text" id="announcement" placeholder="Announcement"><br>
-            <button type="submit">Submit Announcement</button>
-        </form>
+        <div class="container">
+        <div class="card">
+            <div class="image">
+              <img src="https://www.lakedistrict.gov.uk/__data/assets/image/0032/425579/bike-hire.png" alt="img" id="side-img">
+            </div>
+            <div class="subscribe">
+              <h2>Sign Up for our Newsletter</h2>
+              <p>Exercise better and socialize. Sign up for the cycling fitness newsletter.</p>
+              <form id="subscribeForm" method="post" action="subscribe.php">
+                <input type="email" name="email" id="email" placeholder="Email Address" autocomplete="off" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            </div> <!-- end of card div -->
+        </div> <!-- end of container div -->
     </main>
 
     <footer>
